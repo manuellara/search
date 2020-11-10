@@ -1,0 +1,13 @@
+setup.py
+searchandreplace/__init__.py
+searchandreplace/cli.py
+searchandreplace.egg-info/PKG-INFO
+searchandreplace.egg-info/SOURCES.txt
+searchandreplace.egg-info/dependency_links.txt
+searchandreplace.egg-info/entry_points.txt
+searchandreplace.egg-info/requires.txt
+searchandreplace.egg-info/top_level.txt
+searchandreplace/commands/__init__.py
+searchandreplace/commands/replace.py
+searchandreplace/commands/search.py
+searchandreplace/services/__init__.py
