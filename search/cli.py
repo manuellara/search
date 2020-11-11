@@ -16,7 +16,7 @@ class ComplexCLI(click.MultiCommand):
 
     def get_command(self, ctx, name):
         try:
-            mod = __import__(f"searchandreplace.commands.{name}", None, None, ["cli"])
+            mod = __import__(f"search.commands.{name}", None, None, ["cli"])
         except ImportError:
             return
         return mod.cli
@@ -24,6 +24,7 @@ class ComplexCLI(click.MultiCommand):
 
 
 @click.command(cls=ComplexCLI)
+@click.version_option(version='0.01', prog_name='Search by Manuel Lara')
 def cli():
-    """Search & Replace by Manuel Lara"""
+    """Search by Manuel Lara"""
     pass

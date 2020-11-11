@@ -1,6 +1,11 @@
 # gitignore
 
+
+# ignores virtual environment folder
 venv/
+
+#ignores the egg-info folder
 *egg-info/
 
+# ignores all pycache folders
 **/__pycache__/
