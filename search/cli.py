@@ -3,20 +3,22 @@ import click
 
 
 # Complex CLI class
-# lists commands avaialble in /commands
-# returns service based on command name
-class ComplexCLI(click.MultiCommand):
-    def list_commands(self, ctx):
-        rv = []
-        for filename in os.listdir(os.path.join(os.path.dirname(__file__), "commands")):
-            if filename.endswith(".py") and not filename.startswith("__"):
-                rv.append(filename.replace('.py', ''))
-        rv.sort()
-        return rv
 
+class ComplexCLI(click.MultiCommand):
+    # lists commands avaialble in /commands
+    def list_commands(self, ctx):
+        commands = []
+        commandsFolder = os.path.join(os.path.dirname(__file__), "commands")
+        for filename in os.listdir(commandsFolder):
+            if filename.endswith(".py") and filename.startswith("cmd_"):
+                commands.append(filename.replace('cmd_', '').replace('.py', ''))
+        commands.sort()
+        return commands
+        
+    # returns service based on command name
     def get_command(self, ctx, name):
         try:
-            mod = __import__(f"search.commands.{name}", None, None, ["cli"])
+            mod = __import__(f"search.commands.cmd_{name}", None, None, ["cli"])
         except ImportError:
             return
         return mod.cli

@@ -1,4 +1,4 @@
-# Search and Replace
+# Search by Manuel Lara
 
-A search and replace tool for working with txt files
+A search tool for working with txt files
 
