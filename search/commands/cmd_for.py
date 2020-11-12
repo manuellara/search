@@ -12,9 +12,11 @@ def cli(mask, dir, key):
     """
     Search a directory for specific word/string
     
-    e.g. search for -m SELA -d . 1234567  
+    e.g. search for -m SELA -d C:\\Users\\Public\\Desktop 1234567
     """
 
     result = Search(mask, dir, key)
 
     result.output()
+
+    result.searchKey()

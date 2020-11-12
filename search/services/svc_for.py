@@ -9,10 +9,13 @@ class Search:
         self.__key = key
 
     # TODO: function to search files in directory
-    def searchDir(self):
-        pass
+    # TODO: verify path exists
+    def searchForKey(self):
+        for file in os.listdir(self.__dir):
+            if fnmatch.fnmatch(file, '*' + self.__key + '*.py'):
+                print(file)
     
     def output(self):
-        click.echo(f"Default filemask: {self.__mask}")
-        click.echo(f"Default directory: {self.__dir}")
+        click.echo(f"Filemask: {self.__mask}")
+        click.echo(f"Directory: {self.__dir}")
         click.secho((f"ID: {self.__key}"), fg='blue')
