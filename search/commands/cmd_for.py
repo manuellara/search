@@ -19,4 +19,4 @@ def cli(mask, dir, key):
 
     result.output()
 
-    result.searchKey()
+    result.searchForKey()
