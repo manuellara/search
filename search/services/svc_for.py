@@ -6,6 +6,8 @@ class Search:
         self.__mask = mask
         self.__dir = dir
         self.__key = key
+
+    # TODO: function to search files in directory
     
     def output(self):
         click.echo(f"Default filemask: {self.__mask}")
