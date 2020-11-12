@@ -10,4 +10,7 @@ cd search
 pip install .
 ```
 
+### References 
+[Python Click Tutorial( Building Command Line Apps)](https://www.youtube.com/playlist?list=PLJ39kWiJXSizF1shhf2rHi-aA1yjt7rtX)
 
+[PYTHON AUTOMATION](https://www.youtube.com/playlist?list=PLKvQZ5ahnOLQSNyEe2c9j4NCVGxIuw0Cp)

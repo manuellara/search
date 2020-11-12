@@ -8,6 +8,8 @@ class Search:
         self.__key = key
 
     # TODO: function to search files in directory
+    def searchDir(self):
+        pass
     
     def output(self):
         click.echo(f"Default filemask: {self.__mask}")
