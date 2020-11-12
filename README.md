@@ -1,9 +1,12 @@
 # Search by Manuel Lara
 
-A search tool for working with txt files
+A search tool for working with .txt files
 
 ## How to install
-1. Install python (latest)
+1. Install python (latest version)
+2. Git clone the repo
+3. cd into the folder
+4. Pip install current directory 
 ```
 git clone https://github.com/manuellara/search.git
 cd search

@@ -1,5 +1,6 @@
 import click
-
+import os
+import fnmatch
 
 class Search:
     def __init__(self, mask, dir, key):
