@@ -26,7 +26,7 @@ class ComplexCLI(click.MultiCommand):
 
 
 @click.command(cls=ComplexCLI)
-@click.version_option(version='0.01', prog_name='Search by Manuel Lara')
+@click.version_option(version='1.1.0', prog_name='Search by Manuel Lara')
 def cli():
     """Search by Manuel Lara"""
     pass

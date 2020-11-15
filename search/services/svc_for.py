@@ -9,11 +9,23 @@ class Search:
         self.__key = key
 
     # TODO: function to search files in directory
-    # TODO: verify path exists
     def searchForKey(self):
-        for file in os.listdir(self.__dir):
-            if fnmatch.fnmatch(file, '*' + self.__key + '*.py'):
-                print(file)
+        try:
+            # if dir exists, iterate through files directory
+            for file in os.listdir(self.__dir):
+                # if file that matches pattern
+                if fnmatch.fnmatch(file, '*' + self.__mask + '*.md'):
+                    click.secho((f"FOUND: {file}"), fg='red')
+                    # if file is truely a file
+                    if os.path.isfile(file):
+                        try:
+                            click.secho((f"IS A FILE: {file}"), fg='green')
+                        except Exception as e:
+                            pass
+        except Exception as e:
+            # throws exception
+            click.secho((f"PATH DOES NOT EXIST: {self.__dir}"), fg='red')
+        
     
     def output(self):
         click.echo(f"Filemask: {self.__mask}")
