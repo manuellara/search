@@ -13,6 +13,11 @@ cd search
 pip install .
 ```
 
+## How to use
+```
+search for -m random -d C:\\Users\\Public\\Desktop -f csv 123456
+```
+
 ### References 
 [Python Click Tutorial( Building Command Line Apps)](https://www.youtube.com/playlist?list=PLJ39kWiJXSizF1shhf2rHi-aA1yjt7rtX)
 
