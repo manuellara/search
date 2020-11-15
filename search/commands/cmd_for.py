@@ -10,7 +10,7 @@ from search.services.svc_for import Search
 
 def cli(mask, dir, key, ftype):
     """
-    Search a directory for specific word/string
+    Search a directory/file for specific key
     
     e.g. search for -f csv -m testMask -d C:\\Users\\Public\\Desktop 1234567
     """

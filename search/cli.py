@@ -1,7 +1,6 @@
 import os
 import click 
 
-
 # Complex CLI class
 
 class ComplexCLI(click.MultiCommand):
@@ -23,10 +22,8 @@ class ComplexCLI(click.MultiCommand):
             return
         return mod.cli
 
-
-
 @click.command(cls=ComplexCLI)
-@click.version_option(version='1.1.0', prog_name='Search by Manuel Lara')
+@click.version_option(version='1.0.0', prog_name='Search by Manuel Lara')
 def cli():
     """Search by Manuel Lara"""
     pass
