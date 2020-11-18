@@ -16,7 +16,6 @@ class Search:
             for file in os.listdir(self.__dir):
                 # if file that matches pattern
                 if fnmatch.fnmatch(file, '*' + self.__mask + '*.' + self.__ftype):
-                    click.secho((f"FOUND: {file}"), fg='red')
                     # if file is truely a file
                     if os.path.isfile(file):
                         # open file and read lines
@@ -24,8 +23,10 @@ class Search:
                             for line in lines:
                                 # if the key is in the line, print the line
                                 if self.__key in line:
+                                    # prints filename 
+                                    click.secho((f"FOUND: {file}"), fg='red')
+                                    # prints line containing key 
                                     print(line.rstrip())
-                        # click.secho((f"IS A FILE: {file}"), fg='green')
         except Exception as e:
             # throws exception
             click.secho((f"PATH DOES NOT EXIST: {self.__dir}"), fg='red')
