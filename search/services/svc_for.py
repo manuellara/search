@@ -29,10 +29,10 @@ class Search:
                                     print(line.rstrip())
         except Exception as e:
             # throws exception
-            click.secho((f"PATH DOES NOT EXIST: {self.__dir}"), fg='red')
+            click.secho((f"SOMETHING WENT WRONG"), fg='red')
         
     def output(self):
         click.echo(f"Filemask: {self.__mask}")
         click.echo(f"Directory: {self.__dir}")
         click.echo(f"Directory: {self.__ftype}")
-        click.secho((f"ID: {self.__key}"), fg='blue')
+        click.secho((f"ID: {self.__key}"), fg='blue') 
