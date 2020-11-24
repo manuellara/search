@@ -45,9 +45,6 @@ class Search:
                     if os.path.isfile(file):
                         # add filename to list
                         dirFiles.append(file)
-
-            # sorts directory files by name
-            dirFiles.sort()
             
             # passes directory files into pool handler
             self.pool(dirFiles)
